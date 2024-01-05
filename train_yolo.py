@@ -5,7 +5,7 @@ from ultralytics import settings
 from ultralytics import YOLO
 
 # GPU
-# torch.cuda.set_device(0)
+torch.cuda.set_device(0)
 
 # Update ultralytics setting
 settings.update({'datasets_dir': os.getcwd()})
@@ -16,13 +16,13 @@ settings.update({'datasets_dir': os.getcwd()})
 INPUT_SIZE = 960
 
 # Build a new model
-model = YOLO('yolov8n.yaml')
+model = YOLO('yolov8l.yaml')
 
 results = model.train(
     data=config.DATASET_PATH,
     imgsz=INPUT_SIZE,
     epochs=100,
     close_mosaic=10,
-    # device=0,
+    device=0,
     plots=True
 )
