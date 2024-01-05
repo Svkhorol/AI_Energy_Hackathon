@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['defect']
+
+roboflow:
+  workspace: objectdetection-vm8h6
+  project: insulator-defect-hccr6
+  version: 8
+  license: Private
+  url: https://app.roboflow.com/objectdetection-vm8h6/insulator-defect-hccr6/8
