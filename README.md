@@ -32,6 +32,6 @@ This computer vision solution detects the absence of insulators on electric powe
 ├── main.py                        <- Скрипт для получения предсказаний обученной yolo-моделью 
 ├── README.md  
 ├── requirements.txt               <- Файл со списком зависимостей виртуального окружения  
-├── train_yolo.py   
+├── train_yolo.py                  <- Код для обучения YOLO-модели
 └── tune_resnet.py                 <- Код для обучения ResNet-модели
 ```
