@@ -14,7 +14,8 @@ imagePaths = list(paths.list_images(config.TEST_PATH))
 
 print("[INFO] loading model and label binarizer...")
 model = load_model(config.MODEL_PATH)
-lb = pickle.loads(open(config.ENCODER_PATH, "rb").read())
+with open(config.ENCODER_PATH, "rb") as file:
+    lb = pickle.loads(file.read())
 
 # Пустой DataFrame для записи сабмита
 COLs = ['file_name', 'rbbox', 'probability']

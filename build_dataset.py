@@ -24,7 +24,8 @@ for (i, imagePath) in enumerate(imagePaths):
     annotPath = os.path.sep.join([config.ORIG_IMAGES,
                                   "{}.xml".format(filename)])
     # Загружаем файл с аннотацией, инициализируем список с GT-регионами
-    contents = open(annotPath).read()
+    with open(annotPath, 'r') as file:
+        contents = file.read()
     soup = BeautifulSoup(contents, "html.parser")
     gtBoxes = []
     # Размер фото
